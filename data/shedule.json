@@ -1,0 +1,3 @@
+[{"emp":"Dima", "date": "11.11.2016", "time":"13:00", "type": "cut", "bool":"true"},
+{"emp":"pasha", "date": "11.11.2016", "time":"14:00", "type": "cut", "bool":"true"},
+{"emp":"oleg", "date": "11.11.2016", "time":"15:00", "type": "cut", "bool":"true"}]

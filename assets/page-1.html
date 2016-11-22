@@ -1,0 +1,54 @@
+<menu></menu>
+
+	<div class="content" ng-controller="editController">
+		
+		<!-- <form>
+			<input type="text" ng-model="username" >  </input>
+		</form> -->
+
+		<div >
+			<select  ng-model="name.selected" class="selectEmp text" >
+				<option  ng-repeat="item in employ">{{item.emp}}</option>
+			</select>
+				
+				<!-- <select  ng-model="selected1" class="selectDate text" > 
+				<option  ng-repeat="day in days">{{ day | date: 'short'}</option>
+			</select> -->
+			
+
+			<button class="button__ok selectEmp text" ng-click="choiceEmp()">OK</button>
+
+			<p class="text">{{selected}}</p>
+
+			 <!-- Selected Date: {{ date | date:'yyyy-MM-dd a' }} -->
+		</div>
+
+		<table class="table text" ng-init="order='id'">
+		<tr>
+			<td class="table__header text" 
+				ng-class="{'table__header-active':order=='id'}" >
+				 Время
+			
+			<td class="table__header text" 
+				ng-class="{'table__header-active':order=='type'}" >
+				Вид услуги
+			
+			<td class="table__header text" 
+				ng-class="{'table__header-active':order=='bool'}">
+				Бронь
+		
+		</tr>
+		
+		<tr ng-if="item.emp==name.selected" ng-model="selected" ng-repeat="item in employ | orderBy:order:reverse">
+			
+			<td>{{item.time}}</td>
+			<td>{{item.type}}</td>
+			<td >{{item.bool}}<input type="checkbox" ng-model="item.bool" ng-true-value="true" ng-false-value="false"></td>
+		</tr>
+	</table>
+
+			<button class="button__ok selectEmp text" ng-click="change()">OK</button>
+
+
+		
+	</div>

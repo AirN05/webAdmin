@@ -1,0 +1,8 @@
+
+<div class="header__menu">
+			<ul class="header__menu__items" >
+				<li ng-repeat="item in menu">
+        			<a href={{item.href}} ng-class="{disabled: {{page}}-1==menu.indexOf(item)}">{{item.title}}</a>
+    			</li>
+			</ul>
+</div>
