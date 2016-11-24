@@ -29,7 +29,7 @@
 				ng-class="{'table__header-active':order=='id'}" >
 				 Время
 			
-			<td class="table__header text" 
+			<td class="table__header text typeRemind" 
 				ng-class="{'table__header-active':order=='type'}" >
 				Вид услуги
 			
@@ -42,8 +42,8 @@
 		<tr ng-if="item.emp==name.selected" ng-model="selected" ng-repeat="item in employ | orderBy:order:reverse">
 			
 			<td>{{item.time}}</td>
-			<td>{{item.type}}</td>
-			<td >{{item.bool}}<input type="checkbox" ng-model="item.bool" ng-true-value="true" ng-false-value="false"></td>
+			<td ><input type="text" class="editText text" ng-model="item.type" value="{{item.type}}"></td>
+			<td >{{item.bool}}<input type="checkbox" ng-model="item.bool" value="{{item.bool}}" ng-true-value="true" ng-false-value="false"></td>
 		</tr>
 	</table>
 

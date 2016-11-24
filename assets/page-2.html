@@ -1,5 +1,20 @@
 <menu></menu>
 
-	<div class="content">
-	<img class="price__img" src="pic/price.jpg">
-	</div>
+<div class="content text" ng-controller="contentController">
+	
+	<ul class="content__ul" ng-repeat="item in price">
+		<li>
+			<div class="price_block">
+				<div class="price__desc">
+					<div><input type="text" class="editText text" value="{{item.name}}"></div>
+					<div><input type="text" class="editText text" value="{{item.option}}"></div>
+				</div>
+				<div class="price__num"><input class="editText text" type="text" value="{{item.price}}"></div>
+				<hr class="line">
+			</div>
+		</li>
+	</ul>
+
+	<button class="button__ok selectEmp text">OK</button>
+
+</div>

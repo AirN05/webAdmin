@@ -85,7 +85,7 @@ a
 .content{
 
 	///background: rgba(255, 255, 255, 0.6);
-	width: 80%;
+	width: 80vw;
 	left:12em;
 	top:5em;
 	right:7em;
@@ -120,9 +120,10 @@ a
 .content__photo__img{
 
 	display: inline-block;
-	width: 10em;
+	width: 7.5em;
 	height: 7.5em;
 	border-radius: 50%;
+	float: left;
 
 	
 }
@@ -130,9 +131,11 @@ a
 .content__desc{
 	display: inline-block;
 	padding: 1.5em;
+	float: right;
 	position: absolute;
-	top:1.5em;
-
+	left:12em;
+	text-align: left;
+	width: 80%;
 }
 
 .choice{
@@ -181,6 +184,7 @@ a
 
 .button__ok{
 	margin: 1em;
+
 }
 
 .table{
@@ -188,6 +192,7 @@ a
     width: 50em;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.4);
+
     
 }
 .table__header{
@@ -200,4 +205,41 @@ a
     font-weight: 800;
     color:white;
 
+}
+
+.editText{
+	background-color: #1e1e1e;
+	border: 0px;
+	width: 100%;
+	text-align: left;
+}
+
+ul.content__ul
+{
+	list-style-type: none;
+}
+
+.price_block{
+
+	width: 70vw;
+}
+.price__desc{
+	text-align: left;
+	width: 40%;
+	display: inline-block;
+}
+
+.price__num{
+
+	display: inline-block;
+	width: 40%;
+}
+
+.line{
+	background-color: #444444;
+	width:35vw;
+	left:10%;
+	position: absolute;
+	height: 1px;
+	border: none;
 }
