@@ -8,13 +8,13 @@
 
 		<div >
 			<select  ng-model="name.selected" class="selectEmp text" >
-				<option  ng-repeat="item in employ">{{item.emp}}</option>
+				<option  ng-repeat="item in shedule">{{item.emp}}</option>
 			</select>
 				
 				<!-- <select  ng-model="selected1" class="selectDate text" > 
 				<option  ng-repeat="day in days">{{ day | date: 'short'}</option>
-			</select> -->
-			
+			</select> 
+			 -->
 
 			<button class="button__ok selectEmp text" ng-click="choiceEmp()">OK</button>
 
@@ -23,7 +23,7 @@
 			 <!-- Selected Date: {{ date | date:'yyyy-MM-dd a' }} -->
 		</div>
 
-		<table class="table text" ng-init="order='id'">
+	<table class="table text" ng-init="order='id'">
 		<tr>
 			<td class="table__header text" 
 				ng-class="{'table__header-active':order=='id'}" >
@@ -34,20 +34,23 @@
 				Вид услуги
 			
 			<td class="table__header text" 
-				ng-class="{'table__header-active':order=='bool'}">
+				ng-class="{'table__header-active':order=='remind'}">
 				Бронь
-		
+			<td class="table__header text" 
+				ng-class="{'table__header-active':order=='bool'}">
+				
 		</tr>
 		
-		<tr ng-if="item.emp==name.selected" ng-model="selected" ng-repeat="item in employ | orderBy:order:reverse">
+		<tr ng-if="item.emp==name.selected" ng-model="selected" ng-repeat="item in shedule | orderBy:order:reverse">
 			
 			<td>{{item.time}}</td>
-			<td ><input type="text" class="editText text" ng-model="item.type" value="{{item.type}}"></td>
-			<td >{{item.bool}}<input type="checkbox" ng-model="item.bool" value="{{item.bool}}" ng-true-value="true" ng-false-value="false"></td>
+			<td >{{item.type}}</td>
+			<td >{{item.bool}}</td>
+			<td><input type="checkbox" ng-model="item.bool" ng-true-value="true" ng-false-value="false"></td>
 		</tr>
 	</table>
 
-			<button class="button__ok selectEmp text" ng-click="change()">OK</button>
+			<button class="button__ok selectEmp text" ng-click="changeShedule()">Сохранить изменения</button>
 
 
 		

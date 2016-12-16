@@ -1,10 +1,10 @@
 <menu></menu>
 
-<div class="content text" ng-controller="contentController">
+<div class="content text" ng-controller="editController">
 	
 	<ul class="content__ul" ng-repeat="item in price">
 		<li>
-			<div class="price_block">
+			<div class="price_block" ng-model="priceSelected">
 				<div class="price__desc">
 					<div><input type="text" class="editText text" value="{{item.name}}"></div>
 					<div><input type="text" class="editText text" value="{{item.option}}"></div>
@@ -15,6 +15,16 @@
 		</li>
 	</ul>
 
-	<button class="button__ok selectEmp text">OK</button>
 
+<button class="button__ok selectEmp text" ng-click="changePrice()">Сохранить изменения</button>
+<hr>
+<form class="add">
+<p class="text">Добавить услугу</p>
+	<input type="text" class="addText text" placeholder="Услуга"  ng-model="newService" ><br>
+	<input type="text" class="addText text" placeholder="Цена"  ng-model="newPrice" ><br>
+	<input type="text" class="addText text" placeholder="Опция"  ng-model="newOption" ><br>
+
+	<button class="button__ok selectEmp text" ng-click="addPrice()">Добавить</button>
+
+</form>
 </div>

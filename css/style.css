@@ -18,7 +18,7 @@ body{
 	height: 100%;
 	width: 10.2em;
 	white-space: nowrap;
-	z-index:3;
+	
 	display: block;
 	
 }
@@ -42,6 +42,7 @@ body{
 	overflow: auto;
 	padding: 0em;
 	//width: 9.9em;
+	overflow: auto;
 	
 	
 }
@@ -52,19 +53,14 @@ ul.header__menu__items{
 ul.header__menu__items li
 {
 	
-	//display: block;
     padding: 0.65em;
 	font-size: 1.3em;
 	background: rgba(0, 0, 0, 0.8);
 	font-family: 'Lobster', cursive;
-	//height: 1.5em;
+	font-family: "Century Gothic", sans-serif;
 	width: 6.5em;
 	text-align: center;
-	//margin: 0 auto;
 	white-space: normal;
-	
-
-
 
 }
 
@@ -85,14 +81,16 @@ a
 .content{
 
 	///background: rgba(255, 255, 255, 0.6);
-	width: 80vw;
+	width: 83vw;
 	left:12em;
-	top:5em;
-	right:7em;
-	position: absolute;
+	top:4em;
+	right:0em;
+	bottom: 1em;
+	position: fixed;
 	padding: 1em;
 	margin: auto;
-	z-index:2;
+	overflow-y: auto;
+	overflow-x: none; 
 	
 	
 }
@@ -184,7 +182,22 @@ a
 
 .button__ok{
 	margin: 1em;
+	padding: 1em;
+	background: black;
+	border-radius: 8px;
+	border: 0px;
+}
 
+
+.button__ok:hover{
+cursor: pointer;
+}
+.out{
+	position: fixed;
+	left: 89%;
+	top:2%;
+	
+	
 }
 
 .table{
@@ -192,6 +205,8 @@ a
     width: 50em;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+	border: 0px;
 
     
 }
@@ -200,6 +215,8 @@ a
     width: 20%;
     cursor: pointer;
     background: black;
+    border-radius: 8px;
+	border: 0px;
 }
 .table__header-active{
     font-weight: 800;
@@ -210,10 +227,55 @@ a
 .editText{
 	background-color: #1e1e1e;
 	border: 0px;
-	width: 100%;
+	padding: 0.5em;
+	width: 90%;
 	text-align: left;
+	
 }
 
+.addText{
+	background-color: #565656;
+	border: 0px;
+	width: 40vw;
+	text-align: left;
+	margin: 0.5em;
+	padding: 0.5em;
+	border-radius: 8px;
+	border: 0px;
+
+	
+}
+
+label{
+
+	text-align: left;
+	margin: 0.5em;
+	position: absolute;
+ }
+ .content .form__login{
+
+ 	width: 25vw;
+ 	position: absolute;
+ 	left: 30%;
+ 	background: #0e0c0c;
+ 	top: 30%;
+ 	padding: 1em;
+ 	border-radius: 8px;
+ }
+
+ .form__login .addText{
+
+ 	width: 20vw;
+ 	padding: 0.5em;
+ 	margin-left: 2em;
+ 	margin-right: 2em;
+ 	border-radius: 8px;
+ }
+
+ .form__login .button__ok{
+ 	float:right;
+ }
+ 
 ul.content__ul
 {
 	list-style-type: none;
@@ -222,6 +284,20 @@ ul.content__ul
 .price_block{
 
 	width: 70vw;
+}
+
+.add{
+	left: 10%;
+	position: absolute;
+}
+
+.add .button__ok{
+	float: right;
+}
+
+.add p.text{
+	text-align: left;
+	margin: 0.5em;
 }
 .price__desc{
 	text-align: left;

@@ -1,19 +1,27 @@
 <menu></menu>
 
-	<div class="content" ng-controller="contentController">
+<div class="content" ng-controller="editController">
 	<ul class="content__ul"  ng-repeat="item in employ" >
 		<li>
-		<div>
+		<div ng-model="employSelected">
 			<div class="content__photo" >
 				<img class="content__photo__img" src="{{item.image}}">
 			</div>
 			<div class="content__desc text">
-				<input type="text" class="editText text" value="{{item.name}}"><br>
+				<input type="text" class="editText text" value="{{item.name}}" ><br>
 				<input type="text" class="editText text" value="{{item.describe}}">
 			</div>
 		</div>
 
 		</li>
 	</ul>
-	<button class="button__ok selectEmp text" ng-ckick="">OK</button>
+	<button class="button__ok selectEmp text" ng-click="changeEmploy()" >Сохранить изменения</button>
+<hr >
+	<form  method="post" class="add">
+	<p class="text">Добавить мастера</p>
+   		<input class="addText text" type="file" name="photo" accept="image/*,image/jpeg" ng-model="newPhoto"><br>
+  		<input type="text" class="addText text" placeholder="Имя"  ng-model="newName" ><br>
+		<input type="text" class="addText text" placeholder="Город"  ng-model="newCity" ><br>
+		<button class="button__ok selectEmp text" ng-click="addEmploy()">Добавить</button>
+ 	 </form>
 </div>

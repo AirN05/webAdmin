@@ -1,0 +1,12 @@
+<div><div class="content" >
+<form ng-hide="checkAdmin" class="form__login" ng-model="logpass" >
+	
+	<input type="text" class="addText text" ng-model="login" placeholder="Логин"><br>
+	<input type="password" class="addText text" ng-model="password" placeholder="Пароль"><br>
+	<button class="button__ok text selectEmp" ng-click="auth()">Войти</button>
+</form>
+</div>
+
+<button ng-show="checkAdmin" class="button__ok selectEmp text out" ng-click="logout()">LogOut</button>
+</div>
+
